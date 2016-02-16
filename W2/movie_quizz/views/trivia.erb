@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta charset="UTF-8">
+  <title>| Movie Lovers |</title>
+</head>
+<body>
+<header>
+<h3 id="answer" data-question="<%=  @question %>" data-year="<%=  @year %>" data-director="<%=  @director %>"> 
+      <% if @question == "year" %> 
+        Which film was produced in <%=  @year %> ?
+      <% else %> 
+        Which movie was directed by <%= @director %>?
+      <% end %> 
+    </h3>
+</header>
+
+<div id="posters">
+  <% @movies.each do |movie| %>
+     <img id="<%=  movie[:id] %>" onclick="CheckAnswer(this)" data-year="<%=  movie[:year] %>" data-director="<%=  movie[:director][0] %>" src="<%=  movie[:poster] %>"> </span>
+  <% end %> 
+</div>
+<script type="text/javascript" src="./check.js"></script>
+
+</body>
+</html>
+
+
