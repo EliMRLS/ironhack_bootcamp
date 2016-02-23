@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   end
 
   def new
-    #qué hay que poner aquí???
+    
   end
 
   def create
@@ -20,7 +20,7 @@ class ContactsController < ApplicationController
     contact.save
 
     # Render contact's attributes
-    redirect_to(:text => contact.attributes)
+    redirect_to('/contacts')
   end
 
 end
