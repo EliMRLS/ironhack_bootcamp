@@ -19,7 +19,7 @@ class ContactsController < ApplicationController
      # Now we save the contact
     contact.save
 
-    # Render contact's attributes
+    # Show index + new contact
     redirect_to('/contacts')
   end
 
