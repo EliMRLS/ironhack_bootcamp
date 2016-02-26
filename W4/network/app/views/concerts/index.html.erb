@@ -1,0 +1,29 @@
+<h3> Today's concerts </h3>
+
+<ul>
+<% @concerts.each do |concert| %>
+  <li>
+  <%= concert.artist%> 
+  <%= concert.venue%> 
+  <%= concert.city%>
+  <%= concert.date%>
+  <%= concert.price%>
+  <%= concert.description%>
+  </li> 
+<% end %> 
+</ul>
+
+
+<h3> Concerts from this month </h3>
+<ul>
+<% @next_concerts.each do |c| %>
+  <li>
+  <%= c.artist%> 
+  <%= c.venue%> 
+  <%= c.city%>
+  <%= c.date%>
+  <%= c.price%>
+  <%= c.description%>
+  </li> 
+<% end %> 
+</ul>
