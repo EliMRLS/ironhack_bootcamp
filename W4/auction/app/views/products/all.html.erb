@@ -1,0 +1,11 @@
+<h2>All available products</h2>
+
+<ul>
+<% @products.each do |product| %>
+  <li>
+  <%= link_to(product.title, user_product_path(product.user.id, product.id)) %>
+  <%= product.description%> 
+  <%= product.deadline%>
+  </li> 
+<% end %> 
+</ul>

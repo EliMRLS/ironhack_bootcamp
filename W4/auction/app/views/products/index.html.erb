@@ -1,0 +1,12 @@
+<h2><%= @user.name%> 's products </h2>
+
+<ul>
+<% @products.each do |product| %>
+  <li>
+  <%= product.title%> 
+  <%= product.description%> 
+  <%= product.deadline%>
+  </li> 
+<% end %> 
+</ul>
+

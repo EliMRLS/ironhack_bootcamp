@@ -1,0 +1,17 @@
+<h2> Welcome, <%= @user.name %> </h2>
+<h3> Upload a new product </h3>
+
+<%= form_for [@user, @product] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.label :deadline %>
+  <%= f.date_field :deadline %>
+  <br>
+
+  <%= f.submit 'Save' %>
+<% end %>
+
