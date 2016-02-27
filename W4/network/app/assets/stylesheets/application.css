@@ -1,9 +1,3 @@
-.body{
-  font-family: Century Gothic, sans-serif;
-}
-
-
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -19,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+body{  
+  font-family: "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  background-color: #BED8D4;
+}
+
+header{
+  font-family: Century Gothic, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+footer{ 
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:50px;  
+  background-color: #028090;
+  text-align: center;
+}
+
+footer span{
+  font-family: Century Gothic, sans-serif;
+  font-size: 20px;
+  color: white;
+  margin: 20px;
+  vertical-align: middle;
+}
+
+footer img{
+  margin: 5px;
+  vertical-align: middle;
+}

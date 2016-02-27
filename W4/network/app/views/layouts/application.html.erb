@@ -6,16 +6,20 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body class="body">
+<body>
 <div id="wrapper">
   <header>
-  <h1>The Music Network</h1>
+  <h1>Music Network</h1>
+  <h3>The place where music happens</h3>
   </header>
 
 <%= yield %>
 
   <footer>
-  EliMRLS - Copyleft 2016
+  <span>MUSIC NETWORK</span>
+  <img src="/assets/fb.png" width="30" height="30" alt="rrss"/>
+  <img src="/assets/ig.png" width="30" height="30" alt="rrss"/>
+  <img src="/assets/tw.png" width="30" height="30" alt="rrss"/>
   </footer>
 </div>
 

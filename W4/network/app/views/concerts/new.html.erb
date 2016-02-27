@@ -1,4 +1,14 @@
-<h3> Create a new concert </h3>
+<%= flash_message %>
+
+<% if @concert.errors.any? %>
+  <ul>
+  <% @concert.errors.full_messages.each do |error_msg| %>
+    <li><%= error_msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2> Create a new concert </h2>
 
 <%= form_for [@concert] do |f| %>
   <%= f.label :artist %>

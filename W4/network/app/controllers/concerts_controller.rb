@@ -10,19 +10,27 @@ class ConcertsController < ApplicationController
   end
 
   def create
-    @concert = Concert.new(entry_params)
+    @concert = Concert.new(concert_params)
 
     if @concert.save
+      flash[:notice] = "Info uploaded successfully"
       redirect_to concerts_path
     else
+      flash[:alert] = "Something went wrong"
       render 'new' 
     end
 
   end
 
+  def show
+    @concert = Concert.find_by(id: params[:id])
+    @comment_in_bbdd = @concert.comments
+    @comment = Comment.new
+  end
+
 private
 
-  def entry_params
+  def concert_params
     params.require(:concert).permit(:artist, :venue, :city, :date, :time, :price, :description)
   end
 

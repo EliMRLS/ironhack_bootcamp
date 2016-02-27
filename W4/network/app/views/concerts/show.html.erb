@@ -1,0 +1,39 @@
+<h2>Concert details</h2>
+
+<ul>
+  <li>WHO?<br>
+  <%= @concert.artist %><br>
+  <%= @concert.description %></li><br>
+  <li>WHERE?<br>
+  <%= @concert.venue %></li><br>
+  <li>WHEN?<br>
+  <%= @concert.date %></li><br>
+  <li>HOW MUCH?<br>
+  <%= @concert.price %> € </li>
+</ul>
+
+<%= link_to('Back to concerts', concerts_path) %> 
+
+<h3> Comments: </h3>
+
+<ul>
+    <% @comment_in_bbdd.each do |comment| %>
+      <li>
+      <%= comment.name %> 
+      <%= comment.opinion%>
+      </li> 
+    <% end %> 
+  </ul>
+
+<p> Leave a comment: </p>
+
+<%= form_for [@concert, @comment] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :comment %>
+  <%= f.text_field :opinion %>
+  <br>
+
+  <%= f.submit 'Send' %>
+<% end %>

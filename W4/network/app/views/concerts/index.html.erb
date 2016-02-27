@@ -1,29 +1,37 @@
-<h3> Today's concerts </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Network</title>
+</head>
+<body>
 
-<ul>
-<% @concerts.each do |concert| %>
-  <li>
-  <%= concert.artist%> 
-  <%= concert.venue%> 
-  <%= concert.city%>
-  <%= concert.date%>
-  <%= concert.price%>
-  <%= concert.description%>
-  </li> 
-<% end %> 
-</ul>
+<article class="today">
+  <h3 class="menu_icon"> <img alt="Icon" src="/assets/icon_today.png"/> CONCERTS TAKING PLACE TODAY </h3>
+    <ul class="list">
+    <% @concerts.each do |concert| %>
+      <li><%= link_to(concert.artist, concert_path(concert.id)) %></li>
+      <li><img src="/assets/location.png" width="34" height="34" alt="location"/> <%= concert.venue%>, <%= concert.city%></li>
+      <li><img src="/assets/price.png" width="34" height="34" alt="location"/> <%= concert.price%>€</li> 
+    <% end %> 
+  </ul>
+</article>
+
+<aside class="month">
+  <h3 class="menu_icon"> <img alt="Icon" src="/assets/icon_month.png" /> CONCERTS COMING... </h3>
+    <ul class="list">
+    <% @next_concerts.each do |concert| %>
+      <li><%= link_to(concert.artist, concert_path(concert.id)) %></li>
+      <li><img src="/assets/location.png" width="34" height="34" alt="location"/> <%= concert.venue%>, <%= concert.city%></li>
+      <li><img src="/assets/price.png" width="34" height="34" alt="location"/> <%= concert.price%>€</li> 
+    <% end %> 
+  </ul> 
+</aside>
+
+  
+</body>
+</html>
 
 
-<h3> Concerts from this month </h3>
-<ul>
-<% @next_concerts.each do |c| %>
-  <li>
-  <%= c.artist%> 
-  <%= c.venue%> 
-  <%= c.city%>
-  <%= c.date%>
-  <%= c.price%>
-  <%= c.description%>
-  </li> 
-<% end %> 
-</ul>
+
+
