@@ -1,0 +1,33 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Calibri;
+}
+
+h1 {
+  font-family: Courier, Monaco, monospace;
+}
+
+.container {
+  text-align: center;
+}
+
+#chosen {
+  font-family: Monotype Corsiva, Times, serif;
+  font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+

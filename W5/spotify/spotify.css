@@ -1,0 +1,16 @@
+body {
+  font-family: Calibri;
+}
+
+.artists-list li{
+  list-style-type: none;
+}
+
+.photos{
+  width: 200px;
+  height: auto;
+}
+
+.photos:hover{
+  cursor: pointer;
+}
