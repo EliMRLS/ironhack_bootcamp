@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   has_many :bids
   has_many :reviews
   
-  validates :email, uniqueness: true
-  validates :email, presence: true
+  # validates :email, uniqueness: true
+  # validates :email, presence: true
 
 
   def find_by_email(address)

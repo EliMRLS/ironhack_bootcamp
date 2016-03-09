@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  # before_action :authenticate_user!
+
   def new
     @user = User.find(params[:user_id])
     @product = Product.new
@@ -58,5 +60,14 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:title, :description, :deadline, :minimum )
   end
+
+  # def authenticate_user!
+  #   unless user_signed_in?
+  #     #render json: { error: "user not found"}, status: 400
+  #     redirect_to '/users/sign_in'
+  #     return
+  #   end 
+  # end
+
 
 end

@@ -3,9 +3,9 @@ class Product < ActiveRecord::Base
   has_many :bids
   has_many :reviews
 
-  validates :minimum, presence: true
-  validates :title, presence: true
-  validates :description, presence: true
-  validates :deadline, presence: true
+  # validates :minimum, presence: true
+  # validates :title, presence: true
+  # validates :description, presence: true
+  # validates :deadline, presence: true
 
 end
